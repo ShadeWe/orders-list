@@ -20,7 +20,7 @@ class WeatherService
             "X-Yandex-API-Key" => "833c7d4b-cbea-4ea0-9dd7-df2b0a7c8883"
         ];
 
-        $response = $client->request('GET', "https://api.weather.yandex.ru/v2/forecast?" . $query, [
+        $response = $client->request('GET', "https://api.weather.yandex.ru/v2/forecast?" . http_build_query($query), [
             'headers' => $headers
         ]);
 

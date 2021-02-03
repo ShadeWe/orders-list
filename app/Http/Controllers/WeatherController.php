@@ -14,10 +14,10 @@ class WeatherController extends Controller
      */
     public function index()
     {
-        return WeatherService::weather(http_build_query([
+        return WeatherService::weather([
             'lat' => '53.2635',
             'lon' => '34.4161',
             'limit' => 1
-        ]));
+        ]);
     }
 }
